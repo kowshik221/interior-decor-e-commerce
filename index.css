@@ -1,0 +1,321 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f8f4;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: whitesmoke;
+  padding: 20px 35px;
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color:#990fc8;
+  margin: 0;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  gap: 0;
+  justify-content: right;
+}
+
+nav a {
+  position: relative; /* important for underline */
+  text-decoration: none;
+  color: #4a4a4a;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Underline grows from center */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 5%;   /* keeps underline slightly shorter */
+  right: 5%;
+  bottom: -1px;
+  height: 2px;
+  background: #990fc8; /* underline color */
+  opacity: 0.8;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+nav a:hover {
+  color: #990fc8;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+
+    
+
+    /* .log  {
+      background: #990fc8;
+      color: white;
+      padding: 5px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    } */
+
+    .hero  {
+      background: url("new\ img/bac1.jpg" );
+      background-size: cover;
+      color: rgba(25, 25, 22, 0.682);
+      text-align: center;
+      padding: 200px 20px;
+    }
+
+    /* .hero-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+} */
+
+    .hero h2 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      font-weight: bold;
+      margin: 20px auto;
+      /* text-shadow: 1px 1px 3px rgba(0,0,0,0.3); */
+      color: rgba(35, 32, 32, 0.726);
+    }
+    .hero a {
+      background: #a164b5;
+      color: white;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background: #6b0f90;
+    }
+
+
+    h3 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+     #para {
+      padding: 30px 10px;
+      text-align: justify;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .categories, .featured-products {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .categories h3, .featured-products h3 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .category {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .category img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .category h5 {
+      background: #fff;
+      margin: 0;
+      padding: 15px;
+    }
+
+    .category {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.category:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Types of Decoration Section */
+#types {
+  padding: 1px 40px;
+  background-color: #f7f6f2;
+}
+
+/* #types h3 {
+  font-size: 36px;
+  color: #2f2f2f;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+} */
+
+/* Image Sizing */
+.carousel-item img {
+  height: 500px;
+  width: 70%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Caption Styling */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-caption h5 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.carousel-caption p {
+  font-size: 16px;
+  color: #eee;
+  margin-top: 10px;
+}
+
+/* Carousel Indicators (dash style below image) */
+.carousel-indicators {
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ccc;
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #990fc8;
+  width: 50px;
+  opacity: 1;
+}
+
+/* Optional: Animate slides (fade-up effect) */
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+
+    .blog-header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+    .blog-header h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .blog-header p {
+      color: #555;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .blog-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .blog-card img {
+      border-radius: 10px 10px 0 0;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-body h5 {
+      font-weight: 600;
+      color: #222;
+    }
+
+    .read-more {
+      text-decoration: none;
+      font-weight: 500;
+      color: #007bff;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+
+    footer{
+      background-color: #0c0b09;
+      text-align: center;
+      padding: 30px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    footer p{
+      font-size: 14px;
+        color: #fff;
+    }
