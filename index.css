@@ -79,7 +79,7 @@ nav a:focus-visible::after {
     } */
 
     .hero  {
-      background: url("new\ img/bac1.jpg" );
+      background: url("bac1.jpg" );
       background-size: cover;
       color: rgba(25, 25, 22, 0.682);
       text-align: center;
@@ -318,4 +318,5 @@ nav a:focus-visible::after {
     footer p{
       font-size: 14px;
         color: #fff;
+
     }
